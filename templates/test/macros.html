@@ -1,0 +1,9 @@
+{% macro render_list_tuple(list) %}
+{% for item in list %}
+
+{{item.id}}
+{{item.title}}
+{{item.description}}
+
+{% endfor %}
+{% endmacro %}

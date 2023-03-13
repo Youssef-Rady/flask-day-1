@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+{%block main %}
+<div class="card w-100 mt-2 text-center">
+  <div class="card-body">
+      <h1 class="card-title">{{post}}  </h1>
+    <a class="btn btn-primary" href="{{url_for('allposts')}}">go back</a> 
+ </div>
+</div>        
+{% endblock %}

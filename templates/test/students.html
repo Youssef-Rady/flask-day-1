@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{%block main %}
+<div class="card w-100 mt-2 text-center">
+  <div class="card-body">
+      <h1 class="card-title"> all students</h1>
+      {% for student in students%}
+        <li>{{student}}</li>
+      {% endfor %}
+</div> 
+
+<div class="card w-100 mt-2 text-center">
+    <div class="card-body">
+        <h1 class="card-title"> all courses</h1>
+        {% for course in courses%}
+          <li>{{course}}</li>
+        {% endfor %}
+  </div> 
+  <p>*************************************************</p>
+  {% import 'test/macros.html' as mac %}
+  <h1>use Macros</h1>
+  {{mac.render_list_tuple(students)}}
+
+
+
+{% endblock %}
